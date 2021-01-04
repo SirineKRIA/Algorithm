@@ -1,0 +1,26 @@
+ALGORITHM READ_SENTENCE
+
+VAR
+    c: CHAR;
+    sentLen, wordsNbr, vowelsNbr: INTEGER := 0;
+
+BEGIN
+
+    REPEAT
+        Read(c);
+        SWITCH (c) DO
+            default : sentLen = sentLen + 1;
+            case 'a' :
+            case 'e' :
+            case 'i' :
+            case 'o' :
+            case 'u' :
+            case 'y' : vowelsNbr = vowelsNbr + 1; BREAK;
+            case ' ' : wordsNbr = wordsNbr + 1; BREAK;
+        END_SWITCH
+    UNTIL (c = '.')
+
+    write("The length of sentence : ", sentLen);
+    write("The sentence words number : ", wordsNbr);
+    write("The sentence vowels number : ", vowelsNbr);
+END
