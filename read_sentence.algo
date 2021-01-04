@@ -2,10 +2,12 @@ ALGORITHM READ_SENTENCE
 
 VAR
     c: CHAR;
-    sentLen, wordsNbr, vowelsNbr: INTEGER := 0;
+    sentLen, wordsNbr, vowelsNbr: INTEGER;
 
 BEGIN
-
+    sentLen := 0;
+    wordsNbr := 0;
+    vowelsNbr := 0;
     REPEAT
         Read(c);
         SWITCH (c) DO
