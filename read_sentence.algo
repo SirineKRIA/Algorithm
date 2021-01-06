@@ -20,7 +20,7 @@ BEGIN
             case 'y' : vowelsNbr = vowelsNbr + 1; BREAK;
             case ' ' : wordsNbr = wordsNbr + 1; BREAK;
         END_SWITCH
-    UNTIL (c = '.')
+    UNTIL (c <> '.')
 
     write("The length of sentence : ", sentLen);
     write("The sentence words number : ", wordsNbr);
